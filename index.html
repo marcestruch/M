@@ -42,28 +42,31 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header role="banner">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Code & Beats - Inicio">
-                <h1>Code & Beats</h1>
-                <span>No tengas miedo de ser tu mismo</span>
-            </a>
-            
-            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-            
-            <nav role="navigation" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#musica">Música</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#sobre-mi">Sobre Mí</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- En tu header, asegúrate de que tenga esta estructura -->
+<header role="banner">
+    <div class="container">
+        <a href="/" class="logo" aria-label="Code & Beats - Inicio">
+            <h1>Code & Beats</h1>
+            <span>No tengas miedo de ser tu mismo</span>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+            <span class="menu-icon">☰</span>
+        </button>
+        
+        <nav role="navigation" aria-label="Navegación principal">
+            <ul id="main-nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#musica">Música</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- HERO SECTION -->
     <section id="inicio" class="hero">
@@ -380,6 +383,6 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
