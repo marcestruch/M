@@ -35,354 +35,200 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
     
     <!-- FAVICON -->
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="cursor-follower"></div>
+    
     <!-- HEADER -->
-    <!-- En tu header, asegúrate de que tenga esta estructura -->
-<header role="banner">
-    <div class="container">
-        <a href="/" class="logo" aria-label="Code & Beats - Inicio">
-            <h1>Code & Beats</h1>
-            <span>No tengas miedo de ser tu mismo</span>
-        </a>
-        
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-            <span class="menu-icon">☰</span>
-        </button>
-        
-        <nav role="navigation" aria-label="Navegación principal">
-            <ul id="main-nav">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#musica">Música</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+    <header class="fixed-header">
+        <div class="logo">MARC ESTRUCH</div>
+        <nav>
+            <button class="menu-btn">MENU</button>
         </nav>
-    </div>
-</header>
+    </header>
 
-    <!-- HERO SECTION -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h2 class="typewriter">DJ &amp; <span>Developer</span></h2>
-            <p>Fusionando <strong>música electrónica</strong> con <strong>desarrollo web</strong> para crear experiencias únicas</p>
-            
-            <nav aria-label="Migas de pan">
-                <ol>
-                    <li><a href="/">Inicio</a></li>
-                </ol>
-            </nav>
+    <!-- FULLSCREEN MENU OVERLAY -->
+    <div class="menu-overlay">
+        <div class="menu-links">
+            <a href="#home">HOME</a>
+            <a href="#work">WORK</a>
+            <a href="#music">MUSIC</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
         </div>
-    </section>
+        <button class="close-menu">CLOSE</button>
+    </div>
 
-    <!-- SECCIÓN MÚSICA -->
-    <section id="musica" class="music-section">
-        <div class="container">
-            <h2>Mi <span>Música</span></h2>
-            <p>Especializado en <strong>Dubstep</strong> y <strong>DNB</strong>, inspirado en el estilo de <strong>Fred Again</strong></p>
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
             
-            <div class="mixes-grid">
-                <article class="mix-card">
-                    <div class="mix-placeholder">
-                        <span>🎧</span>
-                        <h3>Próximos Mixes</h3>
-                        <p>Sigue mis reels en Instagram para escuchar mis últimas sesiones</p>
-                    </div>
-                    <a href="https://instagram.com/titorrepetto" target="_blank" class="instagram-link">
-                        Ver en Instagram
-                    </a>
-                </article>
-                
-                <article class="mix-card">
-                    <div class="mix-placeholder">
-                        <span>🔥</span>
-                        <h3>Live Sets</h3>
-                        <p>Preparando sesiones en directo con los mejores drops de Dubstep</p>
-                    </div>
-                </article>
-            </div>
+            <!-- HERO SECTION -->
+            <section id="home" class="hero-section">
+                <div class="hero-text-container">
+                    <h1 class="hero-title">
+                        <div class="line">CREATIVE</div>
+                        <div class="line">DEVELOPER</div>
+                        <div class="line">& DJ</div>
+                    </h1>
+                </div>
+                <div class="scroll-indicator">
+                    <span>SCROLL</span>
+                </div>
+            </section>
 
-            <div class="music-styles">
-                <h3>Estilos que manejo:</h3>
-                <div class="styles-grid">
-                    <span class="style-badge dubstep">Dubstep</span>
-                    <span class="style-badge dnb">Drum & Bass</span>
-                    <span class="style-badge bass">Bass Music</span>
-                    <span class="style-badge electronic">Electrónica Experimental</span>
+            <!-- MARQUEE BANNER -->
+            <div class="marquee-container">
+                <div class="marquee-text">
+                    CODE & BEATS — FULL STACK — DUBSTEP — DESIGN — 
+                    CODE & BEATS — FULL STACK — DUBSTEP — DESIGN — 
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- SECCIÓN PROYECTOS -->
-    <section id="proyectos" class="projects-section">
-        <div class="container">
-            <h2>Proyectos de <span>Desarrollo</span></h2>
-            <p>Explora mis creaciones en el mundo del código</p>
-            
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-icon">🔄</div>
-                    <h3>Calculadora Web</h3>
-                    <p>Calculadora funcional con interfaz moderna desarrollada en JavaScript vanilla</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">HTML5</span>
-                        <span class="tech-badge">CSS3</span>
-                    </div>
-                    <a href="https://github.com/marcestruch/Calculadora" target="_blank">Ver Código</a>
-                </article>
+            <!-- PROJECTS SECTION (Cards) -->
+            <section id="work" class="work-section">
+                <div class="section-header">
+                    <h2>SELECTED WORK</h2>
+                    <div class="line-separator"></div>
+                </div>
                 
-                <article class="project-card">
-                    <div class="project-icon">🎮</div>
-                    <h3>Blackjack Game</h3>
-                    <p>Implementación completa del juego de Blackjack con lógica de casino real</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">Game Logic</span>
-                        <span class="tech-badge">DOM Manipulation</span>
-                    </div>
-                    <a href="https://github.com/marcestruch/Blackjack" target="_blank">Jugar Demo</a>
-                </article>
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <article class="project-item">
+                        <div class="project-info">
+                            <span class="project-number">01</span>
+                            <h3 class="project-title">Pelis_v1</h3>
+                            <p class="project-desc">PHP / HTML / bootstrap / MySQL</p>
+                            <a href="https://github.com/marcestruch/Pelis_v1" target="_blank" class="btn-arrow">VIEW PROJECT ↗</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x600/000000/FFFFFF/png?text=PELIS+V1" alt="Pelis_v1 Preview" class="project-img">
+                        </img>
+                    </article>
 
-                <article class="project-card">
-                    <div class="project-icon">📊</div>
-                    <h3>Simulador de Exámenes</h3>
-                    <p>Sistema de tests interactivo con temporizador y evaluación automática</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">Local Storage</span>
-                        <span class="tech-badge">UI/UX</span>
-                    </div>
-                    <a href="https://github.com/marcestruch/Simulador-Examen" target="_blank">Ver Proyecto</a>
-                </article>
+                    <!-- Project 2 -->
+                    <article class="project-item">
+                        <div class="project-info">
+                            <span class="project-number">02</span>
+                            <h3 class="project-title">Traductor</h3>
+                            <p class="project-desc">JavaScript / HTML / CSS / API</p>
+                            <a href="https://github.com/marcestruch/Traductor" target="_blank" class="btn-arrow">VIEW PROJECT ↗</a>
+                        </div>
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x600/000000/FFFFFF/png?text=TRADUCTOR" alt="Traductor Preview" class="project-img">
+                        </img>
+                    </article>
+                </div>
+            </section>
 
-                <article class="project-card">
-                    <div class="project-icon">⚡</div>
-                    <h3>Conversor de Unidades</h3>
-                    <p>Herramienta responsive para conversión de múltiples unidades de medida</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">Responsive Design</span>
-                        <span class="tech-badge">CSS Grid</span>
+            <!-- MUSIC SECTION -->
+            <section id="music" class="music-section">
+                <div class="big-text-banner">
+                    <span>RHYTHM</span>
+                    <span>& CODE</span>
+                </div>
+                <div class="music-content">
+                    <p class="music-intro">Fusionando Dubstep y DNB. Inspirado en Fred Again.</p>
+                    <div class="music-links">
+                        <a href="https://instagram.com/titorrepetto" target="_blank" class="music-link-item">
+                            <span>INSTAGRAM</span>
+                            <span>↗</span>
+                        </a>
+                        <a href="https://soundcloud.com/marc-estruch-malonda" target="_blank" class="music-link-item">
+                            <span>SOUNDCLOUD</span>
+                            <span>↗</span>
+                        </a>
                     </div>
-                    <a href="https://github.com/marcestruch/Conversor" target="_blank">Ver Código</a>
-                </article>
-            </div>
-        </div>
-    </section>
+                </div>
+            </section>
 
-    <!-- SECCIÓN SOBRE MÍ -->
-    <section id="sobre-mi" class="about-section">
-        <div class="container">
-            <h2>Sobre <span>Mí</span></h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p><strong>Trabajador incansable · Conseguir objetivos · Crear buenos momentos</strong></p>
-                    
-                    <p>Soy <strong>Marc Estruch</strong>, un apasionado DJ de <strong>Dubstep/DNB</strong> y <strong>Desarrollador Full-Stack</strong> de Gandia, España. Fusiono mis dos grandes pasiones para crear experiencias únicas tanto en la pista de baile como en el mundo digital.</p>
-                    
-                    <div class="skills">
-                        <h3>Stack Tecnológico</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4>Frontend</h4>
-                                <div class="skill-tags">
-                                    <span>JavaScript</span>
-                                    <span>React</span>
-                                    <span>Angular</span>
-                                    <span>HTML5/CSS3</span>
-                                    <span>Tailwind CSS</span>
-                                </div>
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about-section">
+                <div class="about-container">
+                    <p class="large-paragraph">
+                        I am <strong>Marc Estruch</strong>. A Full-Stack Developer and DJ based in Gandia, Spain. 
+                        I build digital experiences that are as rhythmic as my sets.
+                    </p>
+                    <div class="skills-list">
+                        <span>JAVASCRIPT</span> / <span>REACT</span> / <span>HTML</span> / <span>CSS</span> / <span>BOOTSTRAP</span> / <span>MYSQL</span> / <span>API</span> / <span>NODE.JS</span> / <span>PHP</span> / <span>LARAVEL</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALLERY SECTION -->
+            <section id="gallery" class="gallery-section">
+                <div class="section-header">
+                    <h2>MOMENTS</h2>
+                    <div class="line-separator"></div>
+                </div>
+                
+                <div class="gallery-container">
+                    <div class="gallery-track">
+                        <div class="gallery-item">
+                            <img src="img/gallery-1.jpg" alt="Gallery Image 1">
+                            <div class="gallery-overlay">
+                                <span>ADRENALINE</span>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h4>Backend</h4>
-                                <div class="skill-tags">
-                                    <span>Node.js</span>
-                                    <span>Python</span>
-                                    <span>PHP</span>
-                                    <span>Laravel</span>
-                                </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/gallery-2.jpg" alt="Gallery Image 2">
+                            <div class="gallery-overlay">
+                                <span>DEEP FOCUS</span>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h4>Bases de Datos</h4>
-                                <div class="skill-tags">
-                                    <span>PostgreSQL</span>
-                                    <span>MySQL</span>
-                                    <span>MongoDB</span>
-                                </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/gallery-3.png" alt="Gallery Image 3">
+                            <div class="gallery-overlay">
+                                <span>CONNECTION</span>
                             </div>
-                            
-                            <div class="skill-category">
-                                <h4>DevOps & Tools</h4>
-                                <div class="skill-tags">
-                                    <span>Git/GitHub</span>
-                                    <span>Docker</span>
-                                    <span>AWS</span>
-                                    <span>Linux</span>
-                                    <span>REST APIs</span>
-                                </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/gallery-4.jpg" alt="Gallery Image 4">
+                            <div class="gallery-overlay">
+                                <span>THE CRAFT</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/gallery-5.jpg" alt="Gallery Image 5">
+                            <div class="gallery-overlay">
+                                <span>LIVE NOW</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- SECCIÓN BLOG -->
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <h2>Mi <span>Blog</span></h2>
-            <p>Reflexiones sobre música, código y la fusión de ambas disciplinas</p>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <h3>Cómo el código y la música se complementan</h3>
-                    <p>Explorando las similitudes entre programar y producir música electrónica...</p>
-                    <span class="blog-date">Próximamente</span>
-                </article>
-                
-                <article class="blog-card">
-                    <h3>Mi transición de Java a JavaScript</h3>
-                    <p>Experiencias aprendiendo el ecosistema moderno de desarrollo web...</p>
-                    <span class="blog-date">Próximamente</span>
-                </article>
-                
-                <article class="blog-card">
-                    <h3>El impacto de Fred Again en la escena</h3>
-                    <p>Analizando por qué su estilo revoluciona la música electrónica actual...</p>
-                    <span class="blog-date">Próximamente</span>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN EVENTOS -->
-    <section id="eventos" class="events-section">
-        <div class="container">
-            <h2>Próximos <span>Eventos</span></h2>
-            <p>Donde puedes escucharme tocar en directo</p>
-            
-            <div class="events-grid">
-                <article class="event-card">
-                    <div class="event-date">
-                        <span class="month">PRÓX</span>
-                        <span class="day">X</span>
+            <!-- FOOTER -->
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <div class="footer-header">
+                        <h2>MARC ESTRUCH</h2>
+                        <p>Creative Developer & DJ</p>
                     </div>
-                    <div class="event-info">
-                        <h3>Session en Gandia</h3>
-                        <p>Set de Dubstep y DNB en local por confirmar</p>
-                        <span class="event-location">📍 Gandia, España</span>
-                    </div>
-                </article>
-                
-                <article class="event-card">
-                    <div class="event-date">
-                        <span class="month">PRÓX</span>
-                        <span class="day">X</span>
-                    </div>
-                    <div class="event-info">
-                        <h3>Live Coding Session</h3>
-                        <p>Desarrollo en directo + mezcla musical</p>
-                        <span class="event-location">🌐 Online</span>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="calendar-embed">
-                <p>¿Quieres invitarme a tu evento? <a href="#contacto">Contáctame</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <h2>Colaboremos</h2>
-            <p>¿Tienes un proyecto en mente? Hablemos</p>
-            
-            <form action="https://formspree.io/f/marcstruchmalonda@gmail.com" method="POST">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Asunto</label>
-                    <select id="subject" name="subject">
-                        <option value="booking">Booking DJ</option>
-                        <option value="development">Proyecto de Desarrollo</option>
-                        <option value="collab">Colaboración</option>
-                        <option value="other">Otro</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p>📧 marcstruchmalonda@gmail.com</p>
-                    <p>📍 Gandia, España</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Sígueme</h3>
-                    <div class="social-links">
-                        <a href="https://github.com/marcestruch" aria-label="GitHub">GitHub</a>
-                        <a href="https://linkedin.com/in/marc-estruch-malonda-679282366/" aria-label="LinkedIn">LinkedIn</a>
-                        <a href="https://instagram.com/titorrepetto" aria-label="Instagram">Instagram</a>
-                        <a href="https://x.com/MxxcEM" aria-label="Twitter">Twitter</a>
-                        <a href="https://www.youtube.com/@marcestruch-dev" aria-label="YouTube">YouTube</a>
+                    <div class="socials-large">
+                        <a href="https://github.com/marcestruch" target="_blank">GITHUB ↗</a>
+                        <a href="https://linkedin.com/in/marc-estruch-malonda-679282366/" target="_blank">LINKEDIN ↗</a>
+                        <a href="https://instagram.com/titorrepetto" target="_blank">INSTAGRAM ↗</a>
+                        <a href="https://soundcloud.com/marc-estruch-malonda" target="_blank">SOUNDCLOUD ↗</a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Enlaces</h3>
-                    <nav aria-label="Enlaces rápidos">
-                        <ul>
-                            <li><a href="#inicio">Inicio</a></li>
-                            <li><a href="#musica">Música</a></li>
-                            <li><a href="#proyectos">Proyectos</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                        </ul>
-                    </nav>
+                <div class="copyright-bar">
+                    <p>&copy; 2025 ALL RIGHTS RESERVED</p>
+                    <p>MADE IN GANDIA</p>
                 </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Marc Estruch - Code & Beats. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+            </footer>
 
-    <!-- SCRIPTS -->
-    <script src="/scripts/script.js"></script>
+        </div>
+    </main>
+
+    <!-- GSAP SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Updated Lenis CDN -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <script src="scripts/script.js"></script>
 </body>
 </html>
